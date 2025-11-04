@@ -1,0 +1,20 @@
+[
+  {
+    "version": "0.2.0",
+    "date": "2025-08-23",
+    "highlights": [
+      "User-controlled update preferences with 'Don't show again' option",
+      "Enable/disable updates from Data Management section",
+      "Fixed version injection and build integration"
+    ]
+  },
+  {
+    "version": "0.1.0",
+    "date": "2025-08-22",
+    "highlights": [
+      "Added automatic update notifications",
+      "One-click app updates with reload functionality",
+      "Improved user experience with update management"
+    ]
+  }
+]

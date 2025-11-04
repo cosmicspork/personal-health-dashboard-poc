@@ -1,0 +1,14 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <!-- Simplified version for maskable icon -->
+  <rect width="512" height="512" fill="#2563eb"/>
+  
+  <!-- Heart shape centered and larger for maskable -->
+  <path d="M256 400 C200 350, 140 300, 140 240 C140 200, 170 170, 210 170 C240 170, 250 190, 256 210 C262 190, 272 170, 302 170 C342 170, 372 200, 372 240 C372 300, 312 350, 256 400 Z" fill="#ffffff"/>
+  
+  <!-- Simple heartbeat line -->
+  <path d="M120 256 L180 256 L200 230 L220 282 L240 200 L260 310 L280 256 L392 256" 
+        stroke="#ffffff" 
+        stroke-width="8" 
+        fill="none" 
+        stroke-linecap="round"/>
+</svg>

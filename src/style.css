@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+/* Banner component styles */
+.banner-info {
+  @apply bg-blue-100 text-blue-800 border border-blue-200;
+}
+
+.banner-success {
+  @apply bg-green-100 text-green-800 border border-green-200;
+}
+
+.banner-warning {
+  @apply bg-yellow-100 text-yellow-800 border border-yellow-200;
+}
+
+.banner-error {
+  @apply bg-red-100 text-red-800 border border-red-200;
+}
+
+.banner-update {
+  @apply bg-blue-100 text-blue-800 border border-blue-200;
+}
