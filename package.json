@@ -16,7 +16,7 @@
     "format": "prettier --write \"src/**/*.ts\" \"tests/**/*.ts\""
   },
   "devDependencies": {
-    "@cloudflare/vite-plugin": "^1.11.6",
+    "@cloudflare/vite-plugin": "^1.47.0",
     "@cloudflare/workers-types": "^4.20250820.0",
     "@types/node": "^20.10.0",
     "@typescript-eslint/eslint-plugin": "^8.40.0",
