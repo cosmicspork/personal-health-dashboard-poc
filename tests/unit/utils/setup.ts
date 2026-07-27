@@ -1,5 +1,6 @@
 import 'fake-indexeddb/auto';
 import { beforeEach } from 'vitest';
+import { db } from '../../../src/database/dexie-config';
 
 // Mock crypto.randomUUID for consistent testing
 Object.defineProperty(global, 'crypto', {
@@ -8,14 +9,13 @@ Object.defineProperty(global, 'crypto', {
   },
 });
 
-// Reset IndexedDB before each test
-beforeEach(() => {
-  // Clear all databases
-  indexedDB.databases().then((databases) => {
-    databases.forEach((db) => {
-      if (db.name) {
-        indexedDB.deleteDatabase(db.name);
-      }
-    });
-  });
+// Reset persisted state before each test by clearing the shared Dexie
+// connection's tables. The app opens a single long-lived Dexie instance, so
+// the previous approach - deleting every IndexedDB database out from under
+// that open connection, fire-and-forget without awaiting the promise - raced
+// the tests' own setup and leaked state between them. fake-indexeddb 6.2.x
+// tightened its semantics and surfaced that race as a flake. Clearing the
+// open tables is deterministic and needs no reopen.
+beforeEach(async () => {
+  await Promise.all(db.tables.map((table) => table.clear()));
 });
